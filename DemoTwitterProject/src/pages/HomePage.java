@@ -10,8 +10,9 @@ public class HomePage extends TwitterWrappers{
 		}
 	}
 
-	public SignUpPage clickSignUp(){
+	public SignUpPage clickSignUp() throws InterruptedException{
 		clickByLink("Sign up");
+		Thread.sleep(3000);
 		return new SignUpPage();
 	}
 	public LoginPage clickLogin(){

@@ -1,109 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="48050" started-at="2016-08-03T18:59:00Z" finished-at="2016-08-03T18:59:48Z">
+  <suite name="Default suite" duration-ms="163614" started-at="2016-08-06T05:47:34Z" finished-at="2016-08-06T05:50:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="48050" started-at="2016-08-03T18:59:00Z" finished-at="2016-08-03T18:59:48Z">
+    <test name="Default test" duration-ms="163614" started-at="2016-08-06T05:47:34Z" finished-at="2016-08-06T05:50:17Z">
       <class name="testcases.TC001">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testcases.TC001@feb3fa]" name="beforeSuite" is-config="true" duration-ms="363" started-at="2016-08-04T00:29:00Z" finished-at="2016-08-04T00:29:00Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testcases.TC001@feb3fa]" name="beforeSuite" is-config="true" duration-ms="1289" started-at="2016-08-06T11:17:33Z" finished-at="2016-08-06T11:17:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testcases.TC001@feb3fa]" name="beforeTest" is-config="true" duration-ms="0" started-at="2016-08-04T00:29:00Z" finished-at="2016-08-04T00:29:00Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testcases.TC001@feb3fa]" name="beforeTest" is-config="true" duration-ms="0" started-at="2016-08-06T11:17:34Z" finished-at="2016-08-06T11:17:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="startTestCase()[pri:0, instance:testcases.TC001@feb3fa]" name="startTestCase" is-config="true" duration-ms="0" started-at="2016-08-04T00:29:00Z" finished-at="2016-08-04T00:29:00Z">
+        <test-method status="PASS" signature="startTestCase()[pri:0, instance:testcases.TC001@feb3fa]" name="startTestCase" is-config="true" duration-ms="0" started-at="2016-08-06T11:17:34Z" finished-at="2016-08-06T11:17:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTestCase -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testcases.TC001@feb3fa]" name="beforeMethod" is-config="true" duration-ms="48011" started-at="2016-08-04T00:29:00Z" finished-at="2016-08-04T00:29:48Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testcases.TC001@feb3fa]" name="beforeMethod" is-config="true" duration-ms="61525" started-at="2016-08-06T11:17:34Z" finished-at="2016-08-06T11:18:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="validateSignUp()[pri:0, instance:testcases.TC001@feb3fa]" name="validateSignUp" duration-ms="6" started-at="2016-08-04T00:29:48Z" finished-at="2016-08-04T00:29:48Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at pages.HomePage.<init>(HomePage.java:8)
-	at testcases.TC001.validateSignUp(TC001.java:18)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:746)
-	at org.testng.TestRunner.run(TestRunner.java:600)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
-	at org.testng.TestNG.runSuites(TestNG.java:1104)
-	at org.testng.TestNG.run(TestNG.java:1076)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="validateSignUp()[pri:0, instance:testcases.TC001@feb3fa]" name="validateSignUp" duration-ms="87507" started-at="2016-08-06T11:18:35Z" finished-at="2016-08-06T11:20:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateSignUp -->
-        <test-method status="FAIL" signature="afterMethod()[pri:0, instance:testcases.TC001@feb3fa]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-08-04T00:29:48Z" finished-at="2016-08-04T00:29:48Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at wrapper.GenericWrappers.quitBrowser(GenericWrappers.java:150)
-	at wrapper.TwitterWrappers.afterMethod(TwitterWrappers.java:42)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:216)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:712)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:746)
-	at org.testng.TestRunner.run(TestRunner.java:600)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
-	at org.testng.TestNG.runSuites(TestNG.java:1104)
-	at org.testng.TestNG.run(TestNG.java:1076)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testcases.TC001@feb3fa]" name="afterMethod" is-config="true" duration-ms="14546" started-at="2016-08-06T11:20:03Z" finished-at="2016-08-06T11:20:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="SKIP" signature="afterTest()[pri:0, instance:testcases.TC001@feb3fa]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-08-04T00:29:48Z" finished-at="2016-08-04T00:29:48Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.TC001@feb3fa]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-08-06T11:20:17Z" finished-at="2016-08-06T11:20:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="SKIP" signature="afterSuite()[pri:0, instance:testcases.TC001@feb3fa]" name="afterSuite" is-config="true" duration-ms="0" started-at="2016-08-04T00:29:48Z" finished-at="2016-08-04T00:29:48Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testcases.TC001@feb3fa]" name="afterSuite" is-config="true" duration-ms="5175" started-at="2016-08-06T11:20:18Z" finished-at="2016-08-06T11:20:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->

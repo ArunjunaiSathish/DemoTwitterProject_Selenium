@@ -14,7 +14,7 @@ public class TC001 extends TwitterWrappers{
 		testDescription = "Check Signup Page is able to open";
 	}
   @Test
-  public void validateSignUp(){
+  public void validateSignUp() throws InterruptedException{
 	  new HomePage()
 	  .clickSignUp();
 	  

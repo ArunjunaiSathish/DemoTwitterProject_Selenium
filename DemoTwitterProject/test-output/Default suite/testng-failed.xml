@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="tests">
+  <test name="Default test(failed)" parallel="tests">
     <classes>
       <class name="testcases.TC001">
         <methods>
           <include name="validateSignUp"/>
           <include name="beforeMethod"/>
           <include name="startTestCase"/>
+          <include name="afterSuite"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
+          <include name="afterTest"/>
           <include name="beforeSuite"/>
         </methods>
       </class> <!-- testcases.TC001 -->
