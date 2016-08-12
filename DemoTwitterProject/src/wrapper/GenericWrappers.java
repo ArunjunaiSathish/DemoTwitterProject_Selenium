@@ -1,6 +1,7 @@
 package wrapper;
 
 import java.io.*;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -22,16 +23,16 @@ import utils.Reporter;
 public class GenericWrappers {
 
 	protected static RemoteWebDriver driver;
-	public String sUrl, sHubUrl, sHubPort, primaryWindowHandle;
+	public String sUrl, primaryWindowHandle;
 	public Properties objprop;
 
 	public GenericWrappers() {
 		Properties prop = new Properties();
 		try {
 			prop.load(new FileInputStream(new File("./config.properties")));
-			sHubUrl = prop.getProperty("HUB");
+			//sHubUrl = prop.getProperty("HUB");
 			sUrl = prop.getProperty("URL");
-			sHubPort = prop.getProperty("PORT");
+			//sHubPort = prop.getProperty("PORT");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -52,16 +53,42 @@ public class GenericWrappers {
 	 * seconds and loads the application URL
 	 * 
 	 * @author Arunjunai
+	 * @param sHubPort 
+	 * @param sHubUrl 
+	 * @param platform 
 	 * @param url
 	 *            - the url with http or https
 	 */
 
-	public boolean invokeApp(String browser) {
+	public boolean invokeApp(String browser, String platform, String sHubUrl, String sHubPort) throws MalformedURLException {
 		boolean bReturn = false;
+		
 		try {
-			DesiredCapabilities dc = new DesiredCapabilities();
-			dc.setBrowserName(browser);
-			dc.setPlatform(Platform.VISTA);
+			
+			
+			DesiredCapabilities dc = new DesiredCapabilities();;
+			if(browser.equals("firefox")){
+				
+				dc=DesiredCapabilities.firefox();
+				dc.setBrowserName(browser);
+			}
+			else if(browser.equalsIgnoreCase("chrome")){
+			//	System.setProperty("webdriver.chrome.driver", "E:\\Backup\\selenium-32bit\\drivers\\chromedriver.exe");
+				
+				dc.setBrowserName(browser);
+			}
+			else if(browser.equals("IE")){
+			//	System.setProperty("webdriver.ie.driver", "E:\\Backup\\selenium-32bit\\drivers\\IEDriverServer.exe");
+				dc.setBrowserName(browser);
+			}
+			if(platform.equals("VISTA")){
+				
+				dc.setPlatform(Platform.VISTA);
+			}
+			else if(platform.equals("WIN8_1")){
+				dc.setPlatform(Platform.WIN8_1);
+			}
+			
 
 			driver = new RemoteWebDriver(new URL("http://" + sHubUrl + ":"
 					+ sHubPort + "/wd/hub"), dc);

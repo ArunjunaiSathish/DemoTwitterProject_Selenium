@@ -1,16 +1,21 @@
 package wrapper;
 
+import java.net.MalformedURLException;
+
 import org.testng.annotations.*;
 
 import utils.DataInputProvider;
 import utils.Reporter;
 
 public class TwitterWrappers extends GenericWrappers {
-	protected String browserName;
-	protected String dataSheetName;
+	protected static String platform;
+	protected static String sHubUrl;
+	protected static String sHubPort;
+	protected static String browserName;
+	protected static String dataSheetName;
 	protected static String testCaseName;
 	protected static String testDescription;
-//T
+
 	@BeforeSuite
 	public void beforeSuite() {
 		Reporter.startResult();
@@ -22,9 +27,9 @@ public class TwitterWrappers extends GenericWrappers {
 	}
 
 	@BeforeMethod
-	public void beforeMethod() {
+	public void beforeMethod() throws MalformedURLException {
 		Reporter.startTestCase();
-		invokeApp(browserName);
+		invokeApp(browserName,platform,sHubUrl,sHubPort);
 	}
 
 	@AfterSuite
@@ -41,10 +46,10 @@ public class TwitterWrappers extends GenericWrappers {
 	public void afterMethod() {
 		quitBrowser();
 	}
-
-	@DataProvider(name = "fetchData")
-	public Object[][] getData() {
-		return DataInputProvider.getSheet(dataSheetName);
-	}
+//
+//	@DataProvider(name = "fetchData")
+//	public Object[][] getData() {
+//		return DataInputProvider.getSheet(dataSheetName);
+//	}
 
 }

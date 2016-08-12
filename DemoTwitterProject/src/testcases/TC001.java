@@ -6,12 +6,17 @@ import pages.HomePage;
 import wrapper.TwitterWrappers;
 
 public class TC001 extends TwitterWrappers{
+
   @BeforeClass
-	public void startTestCase(){
-		browserName 	= "firefox";
+  @Parameters({ "browsername", "platform", "sHubUrl", "sHubPort" })
+	public void startTestCase(String browsername,String platform,String sHubUrl,String sHubPort){
+	  	TwitterWrappers.browserName 	= browsername;
+		TwitterWrappers.platform = platform;
+		TwitterWrappers.sHubUrl = sHubUrl;
+		TwitterWrappers.sHubPort = sHubPort;
 		dataSheetName 	= "";
-		testCaseName 	= "TC001 - Check Signup Page is able to open";
-		testDescription = "Check Signup Page is able to open";
+		testCaseName 	= "TC001 - Validate User is able to click Signup button";
+		testDescription = "Validate User is able to click Signup button";
 	}
   @Test
   public void validateSignUp() throws InterruptedException{

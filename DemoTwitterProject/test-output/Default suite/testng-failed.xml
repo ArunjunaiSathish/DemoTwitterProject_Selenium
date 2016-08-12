@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="tests">
-  <test name="Default test(failed)" parallel="tests">
+  <parameter name="sHubUrl" value="192.168.43.186"/>
+  <parameter name="sHubPort" value="5555"/>
+  <parameter name="browsername" value="chrome"/>
+  <parameter name="platform" value="VISTA"/>
+  <test name="Test1(failed)" parallel="tests">
+    <parameter name="sHubUrl" value="192.168.43.186"/>
+    <parameter name="sHubPort" value="5555"/>
+    <parameter name="browsername" value="chrome"/>
+    <parameter name="platform" value="VISTA"/>
     <classes>
       <class name="testcases.TC001">
         <methods>
           <include name="validateSignUp"/>
           <include name="beforeMethod"/>
           <include name="startTestCase"/>
-          <include name="afterSuite"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
-          <include name="afterTest"/>
           <include name="beforeSuite"/>
         </methods>
       </class> <!-- testcases.TC001 -->
     </classes>
-  </test> <!-- Default test(failed) -->
+  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

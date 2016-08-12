@@ -2,6 +2,9 @@ package utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -37,7 +40,12 @@ public class Reporter extends TwitterWrappers  {
 
 	
 	public static void startResult(){
-		extent = new ExtentReports("./reports/result.html", false);
+		DateFormat df = new SimpleDateFormat("dd-MM-yy HH:mm:ss");
+		Date dateobj = new Date();
+		String currenttimedate = df.format(dateobj);
+		currenttimedate = currenttimedate.replace(':', '-');
+		String resultfileName = "result"+ currenttimedate +".html";
+		extent = new ExtentReports("./reports/"+ resultfileName, false);
 		extent.loadConfig(new File("./extent-config.xml"));
 	}
 	

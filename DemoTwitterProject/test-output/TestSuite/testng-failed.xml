@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]" parallel="tests">
+  <parameter name="sHubUrl" value="192.168.43.186"/>
+  <parameter name="sHubPort" value="5557"/>
+  <parameter name="browsername" value="firefox"/>
+  <parameter name="platform" value="VISTA"/>
+  <test name="Test1(failed)" parallel="tests">
+    <parameter name="sHubUrl" value="192.168.43.186"/>
+    <parameter name="sHubPort" value="5557"/>
+    <parameter name="browsername" value="firefox"/>
+    <parameter name="platform" value="VISTA"/>
+    <classes>
+      <class name="testcases.TC002">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="startTestCase"/>
+          <include name="afterMethod"/>
+          <include name="validateRegistration" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testcases.TC002 -->
+      <class name="testcases.TC001">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="startTestCase"/>
+          <include name="afterSuite"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
+          <include name="afterTest"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- testcases.TC001 -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->
