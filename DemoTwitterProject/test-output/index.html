@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-TestSuite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestSuite" title="testcases.TC002" hash-for-method="validateRegistration(TestingLE, testersample@xyz.com, Aldod@334;)">validateRegistration(TestingLE, testersample@xyz.com, Aldod@334;)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-TestSuite" title="testcases.TC004" hash-for-method="fetchCEOLinkCount">fetchCEOLinkCount</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-TestSuite -->
@@ -116,7 +116,7 @@
                     <div class="method-list-content passed suite-TestSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-TestSuite" title="testcases.TC001" hash-for-method="validateSignUp">validateSignUp</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-TestSuite" title="testcases.TC004" hash-for-method="validateSubpagesNavigation">validateSubpagesNavigation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-TestSuite -->
@@ -134,20 +134,19 @@
           <div class="suite-TestSuite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">testcases.TC002</span>
+              <span class="class-name">testcases.TC004</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validateRegistration(TestingLE, testersample@xyz.com, Aldod@334;)">
-                  </a> <!-- validateRegistration(TestingLE, testersample@xyz.com, Aldod@334;) -->
-                  <span class="method-name">validateRegistration</span>
-                  <span class="parameters">(TestingLE, testersample@xyz.com, Aldod@334;)</span>
+                  <a name="fetchCEOLinkCount">
+                  </a> <!-- fetchCEOLinkCount -->
+                  <span class="method-name">fetchCEOLinkCount</span>
                   <div class="stack-trace">java.lang.RuntimeException: FAILED
 	at utils.Reporter.reportStep(Reporter.java:35)
-	at pages.TelephoneDetailsPage.&lt;init&gt;(TelephoneDetailsPage.java:10)
-	at pages.SignUpPage.enterRegistrationDetails(SignUpPage.java:24)
-	at testcases.TC002.validateRegistration(TC002.java:33)
+	at wrapper.GenericWrappers.verifyTextByCssSelector(GenericWrappers.java:190)
+	at pages.BusinessceosPage.&lt;init&gt;(BusinessceosPage.java:10)
+	at testcases.TC004.fetchCEOLinkCount(TC004.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -177,14 +176,14 @@
           <div class="suite-TestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testcases.TC001</span>
+              <span class="class-name">testcases.TC004</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validateSignUp">
-                  </a> <!-- validateSignUp -->
-                  <span class="method-name">validateSignUp</span>
+                  <a name="validateSubpagesNavigation">
+                  </a> <!-- validateSubpagesNavigation -->
+                  <span class="method-name">validateSubpagesNavigation</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -200,13 +199,12 @@
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;3&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;TestSuite&quot; parallel=&quot;tests&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Test1&quot;&gt;
-    &lt;parameter name=&quot;sHubUrl&quot; value=&quot;192.168.43.186&quot;/&gt;
+    &lt;parameter name=&quot;sHubUrl&quot; value=&quot;192.168.0.105&quot;/&gt;
     &lt;parameter name=&quot;sHubPort&quot; value=&quot;5557&quot;/&gt;
     &lt;parameter name=&quot;browsername&quot; value=&quot;firefox&quot;/&gt;
     &lt;parameter name=&quot;platform&quot; value=&quot;VISTA&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testcases.TC001&quot;/&gt;
-      &lt;class name=&quot;testcases.TC002&quot;/&gt;
+      &lt;class name=&quot;testcases.TC004&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test1 --&gt;
 &lt;/suite&gt; &lt;!-- TestSuite --&gt;
@@ -220,7 +218,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test1 (2 classes)</span>
+                <span class="test-name">Test1 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -248,18 +246,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validateRegistration')
-data.setCell(0, 2, 'testcases.TC002')
-data.setCell(0, 3, 44446);
+data.setCell(0, 1, 'validateSubpagesNavigation')
+data.setCell(0, 2, 'testcases.TC004')
+data.setCell(0, 3, 21839);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validateSignUp')
-data.setCell(1, 2, 'testcases.TC001')
-data.setCell(1, 3, 21254);
+data.setCell(1, 1, 'fetchCEOLinkCount')
+data.setCell(1, 2, 'testcases.TC004')
+data.setCell(1, 3, 3966);
 window.suiteTableData['TestSuite']= { tableData: data, tableDiv: 'times-div-TestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 25 seconds</span>
               <div id="times-div-TestSuite">
               </div> <!-- times-div-TestSuite -->
             </div> <!-- times-div -->
@@ -274,22 +272,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-TestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testcases.TC002</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">afterSuite</span>
-                <br/>
-                <span class="ignored-method-name">beforeTest</span>
-                <br/>
-                <span class="ignored-method-name">afterTest</span>
-                <br/>
-                <span class="ignored-method-name">beforeSuite</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-TestSuite" class="panel">
@@ -298,62 +283,52 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testcases.TC001</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testcases.TC004</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
-                <span class="method-start">343 ms</span>
+                <span class="method-start">611 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-class before">
-                <span class="method-name">startTestCase(firefox, VISTA, 192.168.43.186, 5557)</span>
-                <span class="method-start">343 ms</span>
+                <span class="method-name">startTestCase(firefox, VISTA, 192.168.0.105, 5557)</span>
+                <span class="method-start">643 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">361 ms</span>
+                <span class="method-start">657 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">validateSignUp</span>
-                <span class="method-start">33441 ms</span>
+                <span class="method-name">validateSubpagesNavigation</span>
+                <span class="method-start">22119 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">54695 ms</span>
+                <span class="method-start">43962 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testcases.TC002</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">startTestCase(firefox, VISTA, 192.168.43.186, 5557)</span>
-                <span class="method-start">54991 ms</span>
-              </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
-                <span class="method-start">55709 ms</span>
+                <span class="method-start">46315 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">validateRegistration(TestingLE, testersample@xyz.com, Aldod@334;)</span>
-                <span class="method-start">205785 ms</span>
+                <span class="method-name">fetchCEOLinkCount</span>
+                <span class="method-start">68290 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">250282 ms</span>
+                <span class="method-start">72308 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">testcases.TC001</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">252180 ms</span>
+                <span class="method-start">72697 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">252352 ms</span>
+                <span class="method-start">72786 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

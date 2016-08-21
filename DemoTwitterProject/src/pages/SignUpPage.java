@@ -18,9 +18,8 @@ public class SignUpPage extends TwitterWrappers {
 		enterById("email", emailID);
 		enterById("password", Password);
 		clickByXpath("//input[@name='user[use_cookie_personalization]']");
-		//name = user[use_cookie_personalization]
-		clickById("password");
-			//	submit_button
+		clickById("submit_button");
+		wait("//select[@id='device_country_code']");
 		return new TelephoneDetailsPage();
 	}
 	
@@ -29,5 +28,10 @@ public class SignUpPage extends TwitterWrappers {
 		return this;
 	}
 	
-	
+	public HomePage clickTwitterImage() throws InterruptedException{
+	clickByCssSelector("a[class='js-nav js-tooltip js-dynamic-tooltip']");
+	//Thread.sleep(3000);
+	wait("//a[@class='Button StreamsLogin js-login']");
+	return new HomePage();
+	}
 }

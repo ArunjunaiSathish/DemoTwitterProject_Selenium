@@ -2,12 +2,20 @@
 <testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="TestSuite" duration-ms="251837" started-at="2016-08-12T10:38:36Z" finished-at="2016-08-12T10:42:48Z">
+  <suite name="TestSuite" duration-ms="72089" started-at="2016-08-21T17:22:18Z" finished-at="2016-08-21T17:23:30Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="251837" started-at="2016-08-12T10:38:36Z" finished-at="2016-08-12T10:42:48Z">
-      <class name="testcases.TC002">
-        <test-method status="PASS" signature="startTestCase(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.TC002@38203]" name="startTestCase" is-config="true" duration-ms="0" started-at="2016-08-12T16:09:31Z" finished-at="2016-08-12T16:09:31Z">
+    <test name="Test1" duration-ms="72089" started-at="2016-08-21T17:22:18Z" finished-at="2016-08-21T17:23:30Z">
+      <class name="testcases.TC004">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testcases.TC004@17e2f02]" name="beforeSuite" is-config="true" duration-ms="602" started-at="2016-08-21T22:52:17Z" finished-at="2016-08-21T22:52:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testcases.TC004@17e2f02]" name="beforeTest" is-config="true" duration-ms="0" started-at="2016-08-21T22:52:18Z" finished-at="2016-08-21T22:52:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="startTestCase(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.TC004@17e2f02]" name="startTestCase" is-config="true" duration-ms="2" started-at="2016-08-21T22:52:18Z" finished-at="2016-08-21T22:52:18Z">
           <params>
             <param index="0">
               <value>
@@ -21,7 +29,7 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[192.168.43.186]]>
+                <![CDATA[192.168.0.105]]>
               </value>
             </param>
             <param index="3">
@@ -33,28 +41,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTestCase -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testcases.TC002@38203]" name="beforeMethod" is-config="true" duration-ms="150076" started-at="2016-08-12T16:09:32Z" finished-at="2016-08-12T16:12:02Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testcases.TC004@17e2f02]" name="beforeMethod" is-config="true" duration-ms="21462" started-at="2016-08-21T22:52:18Z" finished-at="2016-08-21T22:52:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="validateRegistration(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.TC002@38203]" name="validateRegistration" duration-ms="44446" started-at="2016-08-12T16:12:02Z" data-provider="fetchdata" finished-at="2016-08-12T16:12:46Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[TestingLE]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[testersample@xyz.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Aldod@334;]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="validateSubpagesNavigation()[pri:0, instance:testcases.TC004@17e2f02]" name="validateSubpagesNavigation" duration-ms="21839" started-at="2016-08-21T22:52:39Z" finished-at="2016-08-21T22:53:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSubpagesNavigation -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testcases.TC004@17e2f02]" name="afterMethod" is-config="true" duration-ms="2352" started-at="2016-08-21T22:53:01Z" finished-at="2016-08-21T22:53:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testcases.TC004@17e2f02]" name="beforeMethod" is-config="true" duration-ms="21975" started-at="2016-08-21T22:53:04Z" finished-at="2016-08-21T22:53:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="fetchCEOLinkCount()[pri:1, instance:testcases.TC004@17e2f02]" name="fetchCEOLinkCount" duration-ms="3966" started-at="2016-08-21T22:53:25Z" finished-at="2016-08-21T22:53:29Z">
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[FAILED]]>
@@ -62,9 +65,9 @@
             <full-stacktrace>
               <![CDATA[java.lang.RuntimeException: FAILED
 	at utils.Reporter.reportStep(Reporter.java:35)
-	at pages.TelephoneDetailsPage.<init>(TelephoneDetailsPage.java:10)
-	at pages.SignUpPage.enterRegistrationDetails(SignUpPage.java:24)
-	at testcases.TC002.validateRegistration(TC002.java:33)
+	at wrapper.GenericWrappers.verifyTextByCssSelector(GenericWrappers.java:190)
+	at pages.BusinessceosPage.<init>(BusinessceosPage.java:10)
+	at testcases.TC004.fetchCEOLinkCount(TC004.java:34)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -90,68 +93,20 @@
           </exception> <!-- java.lang.RuntimeException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateRegistration -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testcases.TC002@38203]" name="afterMethod" is-config="true" duration-ms="1898" started-at="2016-08-12T16:12:46Z" finished-at="2016-08-12T16:12:48Z">
+        </test-method> <!-- fetchCEOLinkCount -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testcases.TC004@17e2f02]" name="afterMethod" is-config="true" duration-ms="389" started-at="2016-08-21T22:53:30Z" finished-at="2016-08-21T22:53:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- testcases.TC002 -->
-      <class name="testcases.TC001">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:testcases.TC001@1ee9faa]" name="beforeSuite" is-config="true" duration-ms="327" started-at="2016-08-12T16:08:36Z" finished-at="2016-08-12T16:08:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="startTestCase(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testcases.TC001@1ee9faa]" name="startTestCase" is-config="true" duration-ms="0" started-at="2016-08-12T16:08:36Z" finished-at="2016-08-12T16:08:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[VISTA]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[192.168.43.186]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[5557]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startTestCase -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testcases.TC001@1ee9faa]" name="beforeTest" is-config="true" duration-ms="0" started-at="2016-08-12T16:08:36Z" finished-at="2016-08-12T16:08:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:testcases.TC001@1ee9faa]" name="beforeMethod" is-config="true" duration-ms="33080" started-at="2016-08-12T16:08:36Z" finished-at="2016-08-12T16:09:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="validateSignUp()[pri:0, instance:testcases.TC001@1ee9faa]" name="validateSignUp" duration-ms="21254" started-at="2016-08-12T16:09:09Z" finished-at="2016-08-12T16:09:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateSignUp -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:testcases.TC001@1ee9faa]" name="afterMethod" is-config="true" duration-ms="296" started-at="2016-08-12T16:09:31Z" finished-at="2016-08-12T16:09:31Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.TC001@1ee9faa]" name="afterTest" is-config="true" duration-ms="0" started-at="2016-08-12T16:12:48Z" finished-at="2016-08-12T16:12:48Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testcases.TC004@17e2f02]" name="afterTest" is-config="true" duration-ms="1" started-at="2016-08-21T22:53:30Z" finished-at="2016-08-21T22:53:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testcases.TC001@1ee9faa]" name="afterSuite" is-config="true" duration-ms="750" started-at="2016-08-12T16:12:48Z" finished-at="2016-08-12T16:12:49Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:testcases.TC004@17e2f02]" name="afterSuite" is-config="true" duration-ms="1773" started-at="2016-08-21T22:53:30Z" finished-at="2016-08-21T22:53:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- testcases.TC001 -->
+      </class> <!-- testcases.TC004 -->
     </test> <!-- Test1 -->
   </suite> <!-- TestSuite -->
 </testng-results>
