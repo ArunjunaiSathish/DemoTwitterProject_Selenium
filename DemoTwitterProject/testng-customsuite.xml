@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite" thread-count="3" parallel="tests">
+<!-- <parameter name="browsername" value="firefox"></parameter> -->
+<!-- <parameter name="platform" value="VISTA"></parameter> -->
+	<test verbose="2" name="Test1">
+		<parameter name="browsername" value="firefox"></parameter>
+		<parameter name="platform" value="VISTA"></parameter>
+		<parameter name="sHubUrl" value="192.168.0.105"></parameter>
+		<parameter name="sHubPort" value="5557"></parameter>
+		<classes>
+<!-- 			<class name="testcases.TC001" />   -->
+<!-- 			<class name="testcases.TC002"></class>   -->
+<!-- 			<class name="testcases.TC003"></class>   -->
+		<class name="testcases.TC004"></class> 
+	</classes> 
+	</test> 
+	
+</suite> 
